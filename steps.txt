@@ -1,0 +1,90 @@
+// Open Movie Database API Key = 0a85bfad58bfced1b7e4d5209aedd35b
+API Details:
+Application name: TVSeries
+Application URL: http://localhost:8080/tvseries
+Application Summary: Sample application for educational purpose
+
+// open command prompt
+
+Setting up client
+
+root> mkdir stocker-client
+root> cd stocker-client
+root\stocker-client> npm init -y
+root\stocker-client> npm install -g babel-core babel-cli babel-preset-es2015
+root\stocker-client> npm install --save-dev webpack webpack-dev-server
+root\stocker-client> npm install --save-dev http-server
+root\stocker-client> npm install --save-dev babel-core babel-loader babel-preset-es2015 babel-preset-react
+root\stocker-client> npm install --save-dev react react-dom react-router history
+root\stocker-client> npm install --save-dev react-hot-loader
+root\stocker-client> npm install –-save-dev uniloc
+root\stocker-client> npm install –-save-dev redux react-redux redux-router redux-thunk
+root\stocker-client> npm install –-save-dev events
+root\stocker-client> npm install --save-dev superagent
+root\stocker-client> npm install --save-dev lodash
+
+root\stocker-client> webpack     // to bundle your app distribution in dist\bundle.js
+root\stocker-client> npm run start // start http server
+
+Now, go to [http://localhost:8090] and you must see the welcome page.
+
+---------------------------------------------------
+The App - TvSeries
+Search TV shows (http://api.themoviedb.org/3/search/tv?query="the wakling dead")
+Popular TV shows (http://api.themoviedb.org/3/tv/popular)
+Top rated TV shows (http://api.themoviedb.org/3/tv/top_rated)
+On the air TV shows (http://api.themoviedb.org/3/tv/on_the_air)
+Airing today TV shows (http://api.themoviedb.org/3/tv/airing_today)
+TV show deatils (http://api.themoviedb.org/3/tv/id)
+TV show ratings (http://api.themoviedb.org/3/tv/id/rating)
+TV show images (http://api.themoviedb.org/3/tv/id/images)
+TV shows similar (http://api.themoviedb.org/3/tv/id/similar)
+TV show seasons list (http://api.themoviedb.org/3/tv/id/season/season_number)
+TV show season episodes (http://api.themoviedb.org/3/tv/id/season/season_number/episode/episode_number)
+
+------------------------------------------------------------------
+Considerations for huge enterprise web apps:
+
+    Performance
+    Ease of use
+    Maintainability & Reusability
+    Coherency & Loose Coupling
+    Component Communication
+    Brower History/Navigation
+    Learning curve
+    Use only what you need
+    
+    
+------------------------------------------------------------------
+
+TV Series Hub -
+Search, Popular, Top rated, On the air today, Airing today, Playground
+
+<TVSeriesHub>
+    <MainHeader/>
+    <MainBody>
+        <Search>
+            <SearchBar />
+            <Movies>
+                <MovieDetail>
+                    <Movie/>
+                    <SimilarMovies/>
+                </MovieDetail>
+            <Movies/>
+        </Search>
+        <Popular>
+            <Movies />
+        </Popular>
+        <TopRated>
+            <Movies/>
+        </TopRated>
+        <OnTheAirToday>
+            <Movies/>
+        </OnTheAirToday>
+        <Airing Today>
+            <Movies/>
+        </Airing Today>
+        <Playground />
+    </MainBody>
+    <MainFooter/>
+</TVSeriesHub>

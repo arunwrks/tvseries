@@ -1,0 +1,39 @@
+- Stocker App -
+List stock exchanges.
+List stocks in stock exchanges.
+Add, Delete, Update stocks to exchange.
+View stock details (code, name, exchange, opening price)
+Let user subscribe to stocks for a thresold price alert.
+Let use unsubscribe stock alerts.
+Manage user's stock alert subscriptions.
+See stock price report for the day.
+
+The application tree:
+Stocker 
+    |
+    +-- Exchanges
+    |        |
+    |        +-- Exchange 1, 2, 3 ..
+    |
+    +-- Users
+
+<Stocker>
+    <Header />
+    <Login />
+    <Exchanges kind="tab">
+        <Exchange>
+            <Stocks props=(exchange) >
+                <Stock props=(name, code, current price) />
+            </Stocks>
+        </Exchange>
+    </Exchanges>
+    <Subscriptions kind="tab">
+        <Toolbar>
+            <Search/>
+            <Filter/>
+        </Toolbar>
+        <SubscriptionList>
+            <Subscription/>
+        </SubscriptionList>
+    <Subscriptions />
+</Stocker>
